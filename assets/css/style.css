@@ -1,0 +1,1496 @@
+body {
+  background-color: #e5b6b6;
+  overflow-x: scroll;
+}
+
+/* ------------------------[ INTRO ]---------------------------- */
+.intro {
+  height: 1090px;
+}
+
+#intrologo1 {
+  position: relative;
+  display: flex;
+  left: 650px;
+  top: 50px
+
+}
+/* ---------------------- */
+
+.introtext {
+  position: relative;
+  top: 120px;
+  left: 130px;
+  width: 1400px;
+  height: 300px;
+
+  font-size: 35pt;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  color: rgb(149, 18, 18);
+}
+
+.typewriter h1 {
+  height: 50px;
+  max-width: 1195px;
+  text-align: center;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; 
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.02em; 
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.typewriter h2 {
+  height: 50px;
+  max-width: 815px;
+  text-align: center;
+  overflow: hidden; 
+  border-right: .15em solid orange;
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.02em; 
+  opacity: 0; 
+  animation: 
+    fade-in 0.1s linear 3.5s forwards, /* Fades in after 3.5s */
+    typing 4s steps(40, end) 3.5s forwards, /* Adds a 3.5s delay to match h1 duration */
+    blink-caret .75s step-end infinite 3.5s; /* Matches the delay for the cursor effect */
+}
+
+.typewriter h3 {
+  height: 50px;
+  max-width: 895px;
+  text-align: center;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.02em; 
+  opacity: 0; 
+  animation: 
+    fade-in 0.1s linear 7.5s forwards, 
+    typing 3.5s steps(40, end) 7.5s forwards, 
+    blink-caret .75s step-end infinite 7.5s; 
+}
+
+.typewriter h4 {
+  height: 50px;
+  max-width: 935px;
+  text-align: center;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.02em; 
+  opacity: 0; 
+  animation: 
+    fade-in 0.1s linear 11.5s forwards, 
+    typing 4.5s steps(40, end) 11.5s forwards, 
+    blink-caret .75s step-end infinite 11.5s; 
+}
+
+.typewriter h5 {
+  height: 50px;
+  max-width: 855px;
+  text-align: center;
+  overflow: hidden; 
+  border-right: .15em solid orange; 
+  white-space: nowrap; 
+  margin: 0 auto; 
+  letter-spacing: 0.02em; 
+  opacity: 0; 
+  animation: 
+    fade-in 0.1s linear 16.5s forwards, 
+    typing 5.5s steps(40, end) 16.5s forwards, 
+    blink-caret .75s step-end infinite 16.5s; 
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(149, 18, 18); }
+}
+
+/* Fade-in effect */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------[ SLIDER ]---------------------------- */
+
+.app {
+  position: absolute;
+  min-width: 100px;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  left: 95px;
+  top: 1070px;
+}
+
+.tag-list {
+  width: 90rem;  /* Change the length of slider*/
+  max-width: 105vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 48rem 0;         /* Gap between the two sliders*/
+  position: relative;
+  padding: 0.1rem 0;
+  overflow: hidden;
+}
+
+.loop-slider {
+  position:static;
+  margin-top: -350pt; /* Change the start of top length of slider*/
+}
+
+.inner {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  /* gap:  0.01rem; */
+  color: #951212;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20pt;
+  font-weight: bold;
+  /* font-size: 0.9rem; */
+  /* background-color: #334155;
+  border-radius: 0rem; */
+  padding: 28rem 0.05rem;
+  margin-right: -2rem; /* Must used margin-right instead of gap for the loop to be smooth */
+  margin-inline-start: 3rem;
+  margin-top: 15pt;
+  /* span {
+    font-size: 1.5rem;
+    color: #64748b;
+  } */
+}
+
+
+/* -------------------------------------------------------------------- */
+
+.tag-lista2 {
+  width: 14rem;  /* Change the length of slider*/
+  max-width: 105vw;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 4rem 0;         /* Gap between the two sliders*/
+  position: relative;
+  padding: 0.1rem 0;
+  overflow: hidden;
+}
+
+.loop-slidera2 {
+  position:static;
+  margin-top: -350pt; /* Change the start of top length of slider*/
+}
+
+.innera2 {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+
+.taga2 {
+  width: 10;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  /* gap:  0.01rem; */
+  color: #9512126f;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 12pt;
+  /* font-size: 0.9rem; */
+  /* background-color: #334155;
+  border-radius: 0rem; */
+  padding: 28rem 0.05rem;
+  margin-right: -2.5rem; /* Must used margin-right instead of gap for the loop to be smooth */
+  margin-inline-start: 3rem;
+  margin-top: 15pt;
+}
+
+/* -------------------------------------------------------------------- */
+
+.fade {
+  pointer-events: none;
+  background: linear-gradient(90deg, rgb(229, 182, 182), transparent 5%, transparent 85%, rgb(229, 182, 182));
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* -------------------------------------------------------------------- */
+/* --------------------SLIDER ANSWERS---------------------------- */
+  /* -------ANSWER 2 + FADE 2 -------- */
+  .answer2 {
+    top: -909px;
+    left: 34px;
+    position: relative;
+
+    height: 35px;
+    width: 490px;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .fade2 {
+      width: 490px;
+      height: 40px;
+      background: linear-gradient(90deg, #e5b6b6, transparent 20%, transparent 80%, #e5b6b6);
+      position: absolute;
+      inset: 0;
+    }
+
+
+  /* -------ANSWER 3 + FADE 3 -------- */
+
+  .answer3 {
+    left: 550px;
+    top: -886px;
+    position: relative;
+
+    height: 35px;
+    width: 485px;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .fade3 {
+      width: 485px;
+      height: 40px;
+      background: linear-gradient(90deg, #e5b6b6, transparent 20%, transparent 80%, #e5b6b6);
+      position: absolute;
+      inset: 0;
+    }
+
+      /* -------ANSWER 4 + FADE 4 -------- */
+
+  .answer4 {    /* -------THE PHONE NUMBER -------- */
+    left: 1056px;
+    top: -528px;
+    position: relative;
+
+    height: 35px;
+    width: 485px;
+    /* border: 2px solid red; */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    }
+
+    .fade4 {
+      width: 485px;
+      height: 40px;
+      background: linear-gradient(90deg, #e5b6b6, transparent 20%, transparent 80%, #e5b6b6);
+      position: absolute;
+      inset: 0;
+    }
+
+    /* -------ANSWER 5 + FADE 5 -------- */
+
+    .answer5 {
+      left: 545px;
+      top: -1340px;
+      position: relative;
+
+      height: 35px;
+      width: 485px;
+      /* border: 2px solid red; */
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      }
+
+      .fade5 {
+        width: 485px;
+        height: 40px;
+        background: linear-gradient(90deg, #e5b6b6, transparent 20%, transparent 80%, #e5b6b6);
+        position: absolute;
+        inset: 0;
+      }
+
+      /* -------ANSWER 6 + FADE 6 -------- */
+
+      .answer6 {
+        left: 548px;
+        top: -509px;
+        position: relative;
+
+        height: 35px;
+        width: 485px;
+        /* border: 2px solid red; */
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        }
+
+        .fade6 {
+          width: 485px;
+          height: 40px;
+          background: linear-gradient(90deg, #e5b6b6, transparent 20%, transparent 80%, #e5b6b6);
+          position: absolute;
+          inset: 0;
+        }
+
+/* ---------------------------------------------- */
+.tag-listb {
+  width: 485px;  /* Change the length of slider*/
+  max-width: 485px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 0 rem 0;
+  position: relative;
+  padding: 5.5rem 5;
+  overflow: hidden;
+}
+
+.innerb {
+  display: flex;
+  width: fit-content;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+}
+
+.tagb {
+  display: flex;
+  align-items: center;
+  color: #2e8e27;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15pt;
+  padding: 0.7rem 0.05rem;
+  margin-right: -4.5rem; 
+  margin-inline-start: 5.5rem;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ---------------------------------------------------------------------- */
+
+.tag-listc {
+  width: 885px;  /* Change the length of slider*/
+  max-width: 485px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.innerc {
+  display: flex;
+  width: 2000px;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+  
+}
+
+.tagc {
+  display: flex;
+  align-items: center;
+  color: #2b8c52;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 17pt;
+  font-weight: bold;
+  padding: 0rem 0rem;
+  margin-right: 0.1em; 
+  margin-inline-start: 0.1rem;
+ 
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ---------------------------------------------------------------------- */
+
+.tag-listd {
+  width: 885px;  /* Change the length of slider*/
+  max-width: 485px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.innerd {
+  display: flex;
+  width: 2000px;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+  
+}
+
+.tagd {
+  display: flex;
+  align-items: center;
+  color: rgb(46, 142, 39);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15pt;
+  padding: 0.7rem 0.05rem;
+  margin-right: -4.5rem; 
+  margin-inline-start: 5.5rem;
+ 
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ---------------------------------------------------------------------- */
+/* ---------------------------------------------------------------------- */
+
+.tag-liste {
+  width: 885px;  /* Change the length of slider*/
+  max-width: 485px;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  gap: 1rem 0;
+  position: relative;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.innere {
+  display: flex;
+  width: 3100px;
+  animation-name: loop;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: var(--direction);
+  animation-duration: var(--duration);
+  
+}
+
+.tage {
+  display: flex;
+  align-items: center;
+  color: #2e8e27;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15pt;
+  padding: 0.7rem 0.05rem;
+  margin-right: -4.5rem; 
+  margin-inline-start: 5.5rem;
+ 
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+/* ---------------------------------------------------------------------- */
+/* ------------------------[ MENU 1, 2 and 3 ]---------------------------- */
+.menu123 {
+  display: flex; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px; 
+
+  position: relative; 
+  width: 2100; 
+  height: 1200px;
+  margin-left: 30px;
+  margin-top: 60px;
+  transform: none; 
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------------------- */
+/* Menu 1, 2 and 3 collumn */
+
+.menu1, .menu2, .menu3 {
+  flex: 0 0 500px; 
+  margin-top: -40px;
+  height: 1200px;
+  border: 1px solid rgb(48, 48, 48);
+  box-sizing: border-box; 
+}
+
+/* -------------------------------------------- */
+/* First collumn box 1  */
+
+.menuboxone {
+  position: relative;
+  top: 7%;
+  left: 0.9%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+/* -------------------------------------------- */
+/* First collumn box 2  */
+
+.menuboxtwo {
+  position: relative;
+  top: 290px;
+  left: 0.3%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxthree {
+  position: relative;
+  top: 410px;
+  left: 0.3%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxfour {
+  position: relative;
+  top: 78px;
+  left: 0.9%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxfive {
+  position: relative;
+  top: 268px;
+  left: 0.9%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxsix {
+  position: relative;
+  top: 290px;
+  left: 0.9%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+
+.menuboxseven {
+  position: relative;
+  top: 360px;
+  left: 0.9%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxeight {
+  position: relative;
+  top: 488px;
+  left: 0.8%;
+  width: 475px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+/* -------------------------------------------- */
+/* First collumn box 3  */
+
+.menuboxnine {
+  position: relative;
+  top: 90px;
+  left: 8%;
+  width: 475px;
+  height: 195px;
+}
+
+.menuboxten {
+  position: relative;
+  top: 390px;
+  left: 13%;
+  width: 499px;
+  height: 195px;
+  
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxeleven {
+  position: relative;
+  top:240px;
+  left: 6%;
+  width: 499px;
+  height: 195px;
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 11pt;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+}
+
+.menuboxtwelve {
+  position: relative;
+  top: 320px;
+  left: 8%;
+  width: 415px;
+  height: 85px;
+  text-align: center;
+  padding-top: 10px;
+  border: 1.5px solid rgba(155, 17, 17, 0.29);
+
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+  color: rgb(155, 17, 17);
+  background-color: rgba(155, 17, 17, 0.105);
+  font-weight: bold;
+}
+
+/* -------------------------------------------------------------------- */
+
+#lastorder {
+  font-family: 'Times New Roman', Times, serif;
+  color: rgb(155, 17, 17);
+  font-weight: bold;
+  font-size: 9.5pt;
+}
+#koreanadress {
+  padding:6pt;
+}
+#orders {
+  font-size: 8pt;
+  padding:3pt;
+}
+
+/* -------------------------------------------------------------------- */
+/* The square  */
+
+#square {
+  width: 22px;
+  height: 22px;
+  border: 1px solid rgb(104, 104, 104);
+  background-color: rgb(189, 118, 118);
+  opacity: 0.8;
+  position: absolute;
+  left: 462px;
+  top: -0.6px;
+}
+
+#square:hover span {
+  display: none;
+}
+
+#square:hover:before {
+  content: "X";
+  margin-left: 5px;
+}
+
+#square:hover:active:after {
+  content: "✓";
+  margin-left: 5px;
+}
+
+/* -------------------------------------------------------------------- */
+/* The Menu Text Hover !!!!!! DON'T TOUCH !!!!!! */
+
+.hover-text {
+  transition: color 0.1s ease;
+  width: 485px; 
+}
+
+.hover-content {
+  color: rgb(80, 78, 78);
+}
+
+/* Hide the "hover" text by default */
+.hover-text .hover-content {
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.1s ease;
+}
+
+/* Show the "hover" text on hover */
+.hover-text:hover .hover-content {
+  opacity: 1;
+}
+
+/* Hide the default text on hover */
+.hover-text:hover .default-content {
+  opacity: 0;
+}
+
+/* Preserve state on focus
+.hover-text:focus .hover-content {
+  opacity: 1;
+}
+
+.hover-text:focus .default-content {
+  opacity: 0;
+} */
+
+/* -------------------------------------------------------------------- */
+/* Soup HEADER  */
+#soup {
+  position: relative;
+  top: 80px;
+  width: 490px;
+  left: 4px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#soup1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2pt;
+}
+
+/* Dumplings HEADER  */
+#dumplings {
+  position: absolute;
+  top: 254px;
+  width: 490px;
+  left: 0.5px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#dumplings1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* Cold Vegetables HEADER  */
+#coldveggies {
+  position: absolute;
+  top: 567px;
+  width: 490px;
+  left: 0.5px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#coldveggies1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* Warm Vegetables HEADER  */
+#warmveggies {
+  position: absolute;
+  top: 840px;
+  width: 490px;
+  left: 0.5px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#warmveggies1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+
+/* Meat HEADER  */
+#meat {
+  position: absolute;
+  top: 2.5px;
+  width: 490px;
+  left: 515px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#meat1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* Chicken HEADER  */
+#chicken {
+  position: absolute;
+  top: 388px;
+  width: 490px;
+  left: 515px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#chicken1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* Noodles HEADER  */
+#noodles {
+  position: absolute;
+  top: 605px;
+  width: 490px;
+  left: 515px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#noodles1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* Rice HEADER  */
+#rice {
+  position: absolute;
+  top: 870px;
+  width: 490px;
+  left: 515px;
+  height: 32px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+#rice1 {
+  font-size: 25px;
+  color: rgb(56, 56, 56);
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2.5pt;
+}
+
+/* phonenumber HEADER  */
+#phonenumber {
+  position: absolute;
+  top: 0.5px;
+  width: 480px;
+  left:-60px;
+  height: 35px;
+  border: 1px solid rgb(104, 104, 104, 0.5);
+  background-color: rgba(170, 160, 150, 0.5);
+  }  
+
+
+/* -------------------------------------------------------------------- */
+/*menu collumn, line of dishes  */
+
+#menuline1 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+}
+
+
+#menuline2 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-top: 5%;
+}
+
+
+#menuline3 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 10%;
+}
+
+
+#menuline4 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 15%;
+}
+
+#menuline5 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 20%;
+}
+
+#menuline6 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 25%;
+}
+
+#menuline7 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 30%;
+}
+
+#menuline8 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 35%;
+}
+
+#menuline9 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 40%;
+}
+
+
+#menuline10 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 45%;
+}
+
+
+#menuline11 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 50%;
+}
+
+#menuline12 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 55%;
+}
+
+#menuline13 {
+  position: absolute;
+  width: 485px;
+  height: 22px;
+  border: 1px solid rgb(141, 33, 33);
+  margin-left: -1px;
+  margin-top: 60%;
+}
+
+/* -------------------------------------------------------------------- */
+/* ------------------------[ MENU 4, 5 and 6 ]---------------------------- */
+
+/* #menu456 {
+  width: 2100px;
+  height: 1200px;
+  margin-left: 100px;
+  margin-top: 50px;
+  transform: translate(5%, 2%);
+}
+
+#div4 {
+  display: inline-block;
+  width:500px;
+  height:1200px;
+  border: 1px solid red;
+}
+#div5 {
+  display: inline-block;
+  width:500px;
+  height:1200px;
+  border: 1px solid green;
+  
+}
+
+#div6 {
+  display: inline-block;
+  width:500px;
+  height:1200px;
+  border: 1px solid green;
+}
+ */
+ 
+/* ---------------------------------------------------------- */
+ /* ----------------- PROPAGANDA IMAGES ------------------- */
+
+ .imageboxone {
+  position: relative;
+  margin-inline-start: 110pt;
+  top: -214px;
+  width: 485px;
+  /* border: 5px solid rgb(96, 188, 46); */
+ }
+/* ---------------------------------------------------------- */
+ .imageboxtwo {
+  position: relative;
+  margin-inline-start: 540pt;
+  top: 748px;
+  width: 485px;
+  scale: 130%;
+  /* border: 5px solid rgb(96, 188, 46); */
+ }
+/* ---------------------------------------------------------- */
+.imageboxthree {
+  position: relative;
+  margin-inline-start: 540pt;
+  top: 655px;
+  width: 485px;
+  scale: 130%;
+  /* border: 5px solid rgb(96, 188, 46); */
+ }
+/* ---------------------------------------------------------- */
+
+.zoom {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: -83pt; 
+  margin-top: -895pt;
+}
+
+.zoom:hover {
+  transform: scale(5.5); 
+}
+
+.zoom2 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: -43pt; 
+  margin-top: -8pt;
+}
+
+.zoom2:hover {
+  transform: scale(5.5); 
+}
+
+.zoom3 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: -3pt; 
+  margin-top: -8pt;
+}
+
+.zoom3:hover {
+  transform: scale(5.5); 
+}
+
+.zoom4 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 37pt; 
+  margin-top: -8pt;
+}
+
+.zoom4:hover {
+  transform: scale(5.5); 
+}
+
+.zoom5 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 77pt; 
+  margin-top: -8pt;
+}
+
+.zoom5:hover {
+  transform: scale(5.5); 
+}
+
+.zoom6 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 117pt; 
+  margin-top: -8pt;
+}
+
+.zoom6:hover {
+  transform: scale(5.5); 
+}
+
+.zoom7 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 157pt; 
+  margin-top: -8pt;
+}
+
+.zoom7:hover {
+  transform: scale(5.5); 
+}
+
+.zoom8 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 197pt; 
+  margin-top: -8pt;
+}
+
+.zoom8:hover {
+  transform: scale(5.5); 
+}
+
+.zoom9 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 237pt; 
+  margin-top: -8pt;
+}
+
+.zoom9:hover {
+  transform: scale(5.5); 
+}
+/* --------------------------- */
+.zoom10 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 237pt; 
+  margin-top: -8pt;
+}
+
+.zoom10:hover {
+  transform: scale(2.5); 
+}
+
+.zoom11 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 277pt; 
+  margin-top: -8pt;
+}
+
+.zoom11:hover {
+  transform: scale(4.0); 
+}
+
+.zoom12 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 317pt; 
+  margin-top: -8pt;
+}
+
+.zoom12:hover {
+  transform: scale(3.5); 
+}
+
+.zoom13 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 357pt; 
+  margin-top: -8pt;
+}
+
+.zoom13:hover {
+  transform: scale(2.5); 
+}
+
+.zoom14 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 397pt; 
+  margin-top: -8pt;
+}
+
+.zoom14:hover {
+  transform: scale(4.0); 
+}
+
+.zoom15 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 437pt; 
+  margin-top: -8pt;
+}
+
+.zoom15:hover {
+  transform: scale(3.5); 
+}
+
+.zoom16 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 477pt; 
+  margin-top: -8pt;
+}
+
+.zoom16:hover {
+  transform: scale(2.8); 
+}
+/* --------------------------- */
+.zoom17 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 237pt; 
+  margin-top: -8pt;
+}
+
+.zoom17:hover {
+  transform: scale(2.0); 
+}
+
+.zoom18 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 277pt; 
+  margin-top: -8pt;
+}
+
+.zoom18:hover {
+  transform: scale(3.5); 
+}
+
+.zoom19 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 317pt; 
+  margin-top: -8pt;
+}
+
+.zoom19:hover {
+  transform: scale(3.5); 
+}
+
+.zoom20 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 357pt; 
+  margin-top: -8pt;
+}
+
+.zoom20:hover {
+  transform: scale(2.5); 
+}
+
+.zoom21 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 397pt; 
+  margin-top: -8pt;
+}
+
+.zoom21:hover {
+  transform: scale(3.3); 
+}
+
+.zoom22 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 437pt; 
+  margin-top: -8pt;
+}
+
+.zoom22:hover {
+  transform: scale(3.0); 
+}
+
+.zoom23 {
+  padding: -10px;
+  transition: transform .2s; /* Animation */
+  width: 10px;
+  height: 10px;
+  margin-inline: 477pt; 
+  margin-top: -8pt;
+}
+
+.zoom23:hover {
+  transform: scale(2.7); 
+}
+
+/* ------------------------------------------------------- */
+
+#korean {
+  white-space: nowrap;
+}
+/* ------------------------------------------------------- */
+
+.banner {
+  width: 0px;
+  position: sticky;
+  padding-left: 2050px;
+  padding-top: -590px;
+  top: 10px;
+  scale: 52%;
+}
